@@ -1,5 +1,7 @@
 # Podizer
 Use this script to move your existing codebase to route POD structure.
+This script will recursively go into every folder and try to make a pod out of it.
+
 ```sh
 $ clone this repository (or copy the raw file contents)
 $ copy the file pod-ize.php into your ember project MYEMBERPROJECT
