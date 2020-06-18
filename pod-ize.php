@@ -79,7 +79,6 @@ function rec_move_folder_files($depth, $path, $targetpath, $jsFileName, $skipDas
 }
 
 // Move routes.
-RemoveEmptySubFolders(getcwd() . '/app');
 $targetpath = getcwd() . '/app';
 $path = getcwd() . '/app/routes';
 
@@ -101,5 +100,6 @@ $targetpath = getcwd() . '/app';
 $path = getcwd() . '/app/templates';
 $files = scandir($path);
 foreach ($files as $fileOrFolder) {
-  rec_move_folder_files(0, $path, $targetpath, 'template.hbs', TRUE);
+  rec_move_folder_files(0, $path, $targetpath, 'template.hbs', FALSE);
 }
+RemoveEmptySubFolders(getcwd() . '/app');
